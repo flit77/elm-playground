@@ -38,3 +38,15 @@ update msg model =
                 | entries = model.filter :: model.entries
                 , results = model.filter :: model.results
             }
+
+view : Model -> Html Msg
+view model =
+    div []
+        [ input [ placeholder "Filter…", onInput Filter ] []
+        , button [ onClick Add ] [ text "Add New" ]
+        , ul [] (List.map viewEntry model.results)
+        ]
+
+viewEntry : String -> Html Msg
+viewEntry entry =
+    li [] [ text entry ]
