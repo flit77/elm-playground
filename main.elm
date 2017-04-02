@@ -1,4 +1,8 @@
-import Html exposing (text)
+module Main exposing (..)
+
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 
 main =
-  text "Hello, World!"
+    Html.beginnerProgram { model = model, view = view, update = update }
