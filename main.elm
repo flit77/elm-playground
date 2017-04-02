@@ -19,3 +19,22 @@ model =
     , results = []
     , filter = ""
     }
+
+type Msg
+    = Filter String
+    | Add
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of                                                                                                                
+        Filter filter ->
+            { model
+                | results = List.filter (String.contains filter) model.entries
+                , filter = filter
+            }
+
+        Add ->
+            { model
+                | entries = model.filter :: model.entries
+                , results = model.filter :: model.results
+            }
