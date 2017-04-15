@@ -1,3 +1,3 @@
 # elm-playground
 
-[source article](https://css-tricks.com/introduction-elm-architecture-build-first-application/)
+[Original source article](https://css-tricks.com/introduction-elm-architecture-build-first-application/)
